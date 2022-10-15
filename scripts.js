@@ -1,18 +1,20 @@
-
-    let count = 0;
+// счётчик тут не нужен, ты получаешь значение disp.value из input value="1" и с ним работаешь
+    // let count = 0;
     let btn_plus = document.getElementById("buttonCountPlus");
     let btn_minus = document.getElementById("buttonCountMinus");
     let disp = document.getElementById("CountNumber");
 
     btn_plus.onclick = function () {
-        count++;
-        disp.value = count;
+        // count++;
+        // disp.value = count;
+        disp.value++
     }
 
     btn_minus.onclick = function () {
         if(disp.value >1){
-        count--;
-        disp.value = count;
+        // count--;
+        // disp.value = count;
+            disp.value--
         }
     }
 
@@ -32,7 +34,7 @@
         toastr.success('В корзину добавлено '+ disp.value + ' товаров');
     }
     }
-
+// не используй var, оно устарело. У var другая область видимости, это может влиять на результат выполнения скрипта.
     var big = document.querySelector('.big')
     if (document.querySelectorAll('.images a')) {
       document.querySelectorAll('.images a').forEach(item => {
